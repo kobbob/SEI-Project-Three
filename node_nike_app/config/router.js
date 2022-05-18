@@ -1,17 +1,16 @@
-// import express from 'express'
+import express from 'express'
 
-// // Import controllers
-// import { getExistingCollabs } from '../controllers/existing.js'
+// Imported controllers
+import { showExistingCollabs } from '../controllers/existingCollab.js'
 
-// // Router
-// const router = express.Router()
+// Router
+const router = express.Router()
 
-// // Routes
-// // Generic
-// router.route('/existing')
-//   .get(getExistingCollabs)
+// Routes
+// Generic
+router.route('/nike-collab')
+  .get(showExistingCollabs)
 
-// // Router is exported & passed through generic middleware
-// export default router
-
+// Router is exported and will be passed into generic middleware
+export default router
 
