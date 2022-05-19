@@ -9,7 +9,7 @@ const logger = (req, res, next) => {
   next()
 }
 
-// * function to set up server
+
 const startServer = async () => {
   
   const app = express()
@@ -25,7 +25,7 @@ const startServer = async () => {
     app.listen(PORT, () => console.log(`🚀 - Server listening on Port ${PORT}`))
 
   } catch (err) {
-    console.log('🆘 Something has gone wrong starting the app')
+    console.log('🆘 Something has gone wrong starting the app!')
     console.log(err)
   }
 }
