@@ -1,7 +1,8 @@
 import express from "express"
 import mongoose from "mongoose"
-import { PORT, dbURI } from "./config/environment.js"
+// import { PORT, dbURI } from "./config/environment.js"
 import router from './config/router.js'
+import 'dotenv/config'
 
 
 const logger = (req, res, next) => {
@@ -15,14 +16,14 @@ const startServer = async () => {
   const app = express()
 
   try {
-    await mongoose.connect(dbURI)
+    await mongoose.connect(process.env.dbURI)
     console.log('🚀 MongoDB Database has connected successfully')
 
     app.use(logger)
     app.use(express.json())
-    app.use(router)
+    app.use('/api', router)
   
-    app.listen(PORT, () => console.log(`🚀 - Server listening on Port ${PORT}`))
+    app.listen(process.env.PORT, () => console.log(`🚀 - Server listening on Port ${process.env.PORT}`))
 
   } catch (err) {
     console.log('🆘 Something has gone wrong starting the app!')

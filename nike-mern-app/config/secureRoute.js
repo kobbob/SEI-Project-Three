@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken' // provides verify method. 
-import { SECRET } from './environment.js'
 import User from '../models/users.js'
+import 'dotenv/config'
 
 // exporting this function. 
 // it's quite similar to a controller. 
@@ -17,7 +17,7 @@ export const secureRoute = async (req, res, next) => {
     // 3. Verify the token using a method provided by jwt
     // first arg is the token
     // second is the secret 
-    const payload = jwt.verify(token, SECRET)
+    const payload = jwt.verify(token, process.env.SECRET)
     console.log('payload ->', payload)
     // At this point we have all the information we need to verify a user. The token is valid, but we need to ensure the user actually exists. 
     // Using the id from the payload.sub, we are going to verify that the user still exists by running the findById method

@@ -1,6 +1,6 @@
 import User from '../models/users.js'
 import jwt from 'jsonwebtoken' // jwt is going to provide methods to create a token
-import { SECRET } from '../config/environment.js'
+import 'dotenv/config'
 
 // METHOD: POST 
 // Endpoint: /register
@@ -41,7 +41,7 @@ export const loginUser = async (req, res) => {
     // First argument is our payload, this will be an object and contain a sub that will identify the user
     // Second argument is the secret that makes our token secure, you'd need a secret to decode it, or generate a valid and acceptable token
     // third argument is our options - this is where we're going to set our expiry date. 
-    const token = jwt.sign({ sub: userToLogin._id }, SECRET, { expiresIn: '5h' })
+    const token = jwt.sign({ sub: userToLogin._id }, process.env.SECRET, { expiresIn: '5h' })
     console.log('TOKEN ->', token)
 
     return res.status(200).json({ message: `Welcome back ${userToLogin.username}`, token: token })

@@ -1,9 +1,9 @@
 import mongoose from 'mongoose'
 import Collab from '../models/collaborations.js'
 import User from '../models/users.js'
-import { dbURI } from '../config/environment.js'
 import collabData from './data/collaborations.js'
 import userData from './data/users.js'
+import 'dotenv/config'
 
 
 // This function is going to be executed once and will either add data or fail and close the connection
@@ -11,7 +11,7 @@ const seedDatabase = async () => {
   try {
 
     // Connect to the database
-    await mongoose.connect(dbURI)
+    await mongoose.connect(process.env.dbURI)
     console.log('🚀 Database connected')
 
     // Remove all the data from the database
