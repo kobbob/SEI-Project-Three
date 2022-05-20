@@ -1,19 +1,40 @@
 import { useEffect } from 'react'
 import axios from 'axios'
 
+// Import react-router-dom
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Import Components
+import Welcome from './components/Welcome'
+import CollabIndex from './components/collaborations/CollabIndex'
+
+// Import Auth Components
+
+
 const App = () => {
 
   console.log(process.env.REACT_APP_TOKEN)
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/nike-collab/') // * <-- replace with your endpoint
+      const { data } = await axios.get('/api/nike-collab/') 
       console.log(data)
     }
     getData()
   })
 
-  return <h1>Hello World</h1>
+
+  return (
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Welcome />
+          <CollabIndex />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
 }
 
 export default App
