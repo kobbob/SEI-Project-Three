@@ -5,7 +5,7 @@ import axios from 'axios'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Import Components
-import Welcome from './components/Welcome'
+import Home from './components/Home'
 import CollabIndex from './components/collaborations/CollabIndex'
 
 // Import Auth Components
@@ -27,10 +27,20 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
-          <Welcome />
-          <CollabIndex />
+          {/*    "/loading" element={<Loading />} */}
+          
+          <Route path="/" element={<Home />} />
+
+          {/* Auth routes */}
+
+          {/* Collab routes */}
+          <Route path="/collaborations" element={<CollabIndex />} />
+
+          {/* Route for a specific collab */}
+
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </>
