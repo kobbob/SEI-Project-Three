@@ -7,6 +7,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import sticker from '../../images/sticker.webp'
+
 
 const CollabHome = () => {
 
@@ -32,12 +34,15 @@ const CollabHome = () => {
 
   return (
     <main className='collab-wrapper'>
+      <div className='sticker-frame'>
+        <img src={sticker} alt='nike-sneakerhead-sticker' className='sticker' />
+      </div>
       <h1>Collaborations</h1>
       {loading ?
         <p>Loading...</p>
         :
         errors ?
-          <p>Collaborations not loaded. Please try again later!</p>
+          <p>Collaborations could not load. Please try again later!</p>
           :
           <div className='collab-container'>
             {collabs.map(collab => {

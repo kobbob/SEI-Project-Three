@@ -1,8 +1,13 @@
 
+import giphy from '../images/giphy.gif'
+
 const Loading = () => {
   return (
     <>
-      <h1>Loading...start page</h1>
+      <div className='loading-page'>
+        <img src={giphy} alt='nike-running-app-gif' className='loading-gif' />
+        <h1>Loading . . . </h1>
+      </div>
     </>
   )
 }
