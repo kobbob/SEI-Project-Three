@@ -4,19 +4,22 @@
 
 // filter method: existing & future
 
+// {/* <h1>HOME - trigger welcome modal after loading page</h1>
+// <!-- Trigger/Open Welcome Modal after the loading page --> */}
+
 import axios from 'axios'
 
 import { useNavigate } from 'react-router-dom'
 
 import { Link } from 'react-router-dom'
 
-const CollabIndex = () => {
+const CollabHome = () => {
   return (
     <>
-      <h1>Testing</h1>
-      <Link to="/">Go Back Home</Link>
+      <h1>HOME - All collaborations</h1>
+      {/* <!-- Trigger/Open CollabSHOW Modal after onClick --> */}
     </>
   )
 }
 
-export default CollabIndex
+export default CollabHome

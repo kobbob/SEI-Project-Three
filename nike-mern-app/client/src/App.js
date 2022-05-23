@@ -5,8 +5,11 @@ import axios from 'axios'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Import Components
-import Home from './components/Home'
-import CollabIndex from './components/collaborations/CollabIndex'
+// import Loading from './components/Loading'
+import Navigation from './components/common/Navigation'
+import CollabHome from './components/collaborations/CollabHome'
+import Menu from './components/tbc/Menu'
+
 
 // Import Auth Components
 
@@ -17,7 +20,7 @@ const App = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/nike-collab/') 
+      const { data } = await axios.get('/api/nike-collab/')
       console.log(data)
     }
     getData()
@@ -25,25 +28,29 @@ const App = () => {
 
 
   return (
-    <>
+    <main className='site-wrapper'>
       <BrowserRouter>
+
         {/* <Navbar /> */}
+        <Navigation />
         <Routes>
-          {/*    "/loading" element={<Loading />} */}
-          
-          <Route path="/" element={<Home />} />
+          {/* '/loading' element={<Loading />}
+          <Route path='/' element={<Loading />} />   */}
+          <Route path='/collaborations' element={<CollabHome />} />
+          {/* Collab routes */}
+          {/* <Route path='/menu' element={<Menu />} /> */}
+
 
           {/* Auth routes */}
 
-          {/* Collab routes */}
-          <Route path="/collaborations" element={<CollabIndex />} />
 
           {/* Route for a specific collab */}
 
-          {/* <Route path="*" element={<NotFound />} /> */}
+
+          {/* <Route path='*' element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
-    </>
+    </main>
   )
 }
 
