@@ -8,11 +8,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import Loading from './components/Loading'
 import Navigation from './components/common/Navigation'
 import CollabHome from './components/collaborations/CollabHome'
-import Menu from './components/tbc/Menu'
+import Loading from './components/Loading'
+import Menu from './components/Menu'
+import About from './components/About'
+import SignInLanding from './components/auth/SignInLanding'
 
 
 // Import Auth Components
-
 
 const App = () => {
 
@@ -34,18 +36,12 @@ const App = () => {
         {/* <Navbar /> */}
         <Navigation />
         <Routes>
-          {/* '/loading' element={<Loading />}
-          <Route path='/' element={<Loading />} />   */}
+          <Route path='/' element={<Loading />} />  
           <Route path='/collaborations' element={<CollabHome />} />
-          {/* Collab routes */}
-          {/* <Route path='/menu' element={<Menu />} /> */}
 
-
-          {/* Auth routes */}
-
-
-          {/* Route for a specific collab */}
-
+          <Route path='/menu' element={<Menu />} />  
+          <Route path='/about' element={<About />} />  
+          <Route path='/signinlanding' element={<SignInLanding />} />  
 
           {/* <Route path='*' element={<NotFound />} /> */}
         </Routes>

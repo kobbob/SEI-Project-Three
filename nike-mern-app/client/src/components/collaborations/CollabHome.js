@@ -1,24 +1,62 @@
-// function / route from signUp completion to have a dialogue window saying do you want to 
-// .. add a new collaboration? then link to the add collab. 
-// route from Menu too
 
 // filter method: existing & future
 
 // {/* <h1>HOME - trigger welcome modal after loading page</h1>
 // <!-- Trigger/Open Welcome Modal after the loading page --> */}
-
+// {/* <!-- Trigger/Open CollabSHOW Modal after onClick --> */}
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import { useNavigate } from 'react-router-dom'
-
-import { Link } from 'react-router-dom'
 
 const CollabHome = () => {
+
+  const [collabs, setCollabs] = useState([])
+  const [errors, setErrors] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const getCollabs = async () => {
+      try {
+        const { data } = await axios.get('/api/nike-collab/')
+        setCollabs(data)
+      } catch (err) {
+        console.log(err)
+        setErrors(true)
+      }
+      setLoading(false)
+    }
+    getCollabs()
+  }, [])
+
+
+
   return (
-    <>
-      <h1>HOME - All collaborations</h1>
-      {/* <!-- Trigger/Open CollabSHOW Modal after onClick --> */}
-    </>
+    <main className='collab-wrapper'>
+      <h1>Collaborations</h1>
+      {loading ?
+        <p>Loading...</p>
+        :
+        errors ?
+          <p>Collaborations not loaded. Please try again later!</p>
+          :
+          <div className='collab-container'>
+            {collabs.map(collab => {
+              const { _id, collaboration, year, image1 } = collab
+              console.log(collab)
+              return (
+                <div className='card' key={_id}>
+                  <div className='card-header'>
+                    {collaboration} - {year}
+                  </div>
+                  <div className='card-image'>
+                    <img src={image1} alt={`${collaboration} - ${year}`} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+      }
+    </main>
   )
 }
 

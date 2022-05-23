@@ -1,10 +1,20 @@
-.navbar{
+.main-header{
   height: 80px;
-  .nav-link{
-    color: #ffff;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  align-items: center;
+  max-width: 800px;
 }
 
-#logo{
+#home-text-link{
   font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  color: $preset-color-white;
+  font-size:25px;
+}
+
+#nav-icon{
+  font-size:50px;
+  text-decoration: none;
 }

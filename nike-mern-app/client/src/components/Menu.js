@@ -6,11 +6,14 @@ import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
-    <>
+    <section className="menu-wrapper">
       <h1>Menu Page</h1>
-      <Link to='/collaborations'>Change this to automatic entry transition</Link>
-      <p>About</p>
-    </>
+      <ul>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/collaborations'>Collaborations</Link></li>
+        <li><Link to='/signinlanding'>Sign In</Link></li>
+      </ul>
+    </section>
   )
 }
 

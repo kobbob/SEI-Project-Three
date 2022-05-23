@@ -1,0 +1,15 @@
+h1,
+ul,
+a,
+p {
+  color: $preset-color-white;
+  text-align: none;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 50px;
+  background-color: $preset-color-black;
+}
