@@ -44,13 +44,8 @@ const CollabHome = () => {
               const { _id, image1, collaboration, year } = collab
               console.log(collab)
               return (
-                <div className='card' key={_id}>
-                  {/* <div className='card-header'>
-                    {collaboration} - {year}
-                  </div> */}
-                  <div className='card-image'>
-                    <img src={image1} alt={`${collaboration} - ${year}`} />
-                  </div>
+                <div className='card-image' key={_id}>
+                  <img src={image1} alt={`${collaboration} - ${year}`} />
                 </div>
               )
             })}
