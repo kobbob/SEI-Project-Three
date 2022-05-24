@@ -1,10 +1,9 @@
 button{
   border: 2px solid #011627;
   border-radius: 0.3em;
-  background-color: #2EC4B6;
-  
-  padding: 0.5em;
-  
+  background-color: #01cbbd;
+  padding: 0.6em;
+  margin: 0.5em;
   transition: 0.3s;
 }
 
@@ -17,7 +16,7 @@ button:hover{
   cursor: pointer;
 }
 
-.PopUp{
+.PopUp-Wrapper{
   position: fixed;
 
   left: 25%;
@@ -27,7 +26,7 @@ button:hover{
   
   border: 1px solid #011627;
   border-radius: 1em;
-  box-shadow: -2px 5px 5px #E71D36;
+  box-shadow: -2px 5px 5px #b50f05;
 
   background-color: #FDFFFC;
   
@@ -58,6 +57,8 @@ button:hover{
 
 .pu-img{
   width: 20%;
+  margin-left: 2em;
+  border: 1px solid grey;
 }
 
 .pu-content-container{
@@ -67,7 +68,5 @@ button:hover{
   align-items: center;
 }
 
-.pu-singlecollab-container{
 
-}
 

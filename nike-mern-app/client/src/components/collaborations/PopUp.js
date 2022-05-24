@@ -95,7 +95,7 @@ const PopUp = props => {
 
 
   return (
-    <div className="PopUp">
+    <div className="PopUp-Wrapper">
       {/* x close window */}
       <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
       <div className="pu-content-container">
@@ -104,8 +104,8 @@ const PopUp = props => {
       </div>
       {/* button controls */}
       <div className="pu-button-container">
-        <button onClick={() => setPopUp(false)}> MORE BONES! </button>
-        <button onClick={() => setPopUp(false)}> No, thank you. </button>
+        <button onClick={() => setPopUp(false)}> Edit Entry </button>
+        <button onClick={() => setPopUp(false)}> Delete Entry </button>
       </div>
     </div>
   )
