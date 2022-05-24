@@ -9,13 +9,21 @@ import axios from 'axios'
 
 import sticker from '../../images/sticker.webp'
 
+import PopUp from './PopUp'
 
 const CollabHome = () => {
 
   const [collabs, setCollabs] = useState([])
   const [errors, setErrors] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [popUp, setPopUp] = useState(false)
 
+  const handleCheckout = () => {
+    setPopUp(true)
+  }
+
+
+  // accessing Express API to get all collaborations
   useEffect(() => {
     const getCollabs = async () => {
       try {
@@ -51,9 +59,11 @@ const CollabHome = () => {
               return (
                 <div className='card-image' key={_id}>
                   <img src={image1} alt={`${collaboration} - ${year}`} />
+                  <button className='btn' onClick={() => setPopUp(true)}>Click to Open</button>
                 </div>
               )
             })}
+            {popUp && <PopUp setPopUp={setPopUp} />}
           </div>
       }
     </main>
