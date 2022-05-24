@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import sticker from '../../images/sticker.webp'
+import stamp from '../../images/hanging_sneakers_white_with_rope.png'
 
 import PopUp from './PopUp'
 
@@ -44,6 +45,7 @@ const CollabHome = () => {
     <main className='collab-wrapper'>
       <div className='sticker-frame'>
         <img src={sticker} alt='nike-sneakerhead-sticker' className='sticker' />
+        <img src={stamp} alt='hanging-sneakers' className='stamp' />
       </div>
       <h1>Collaborations</h1>
       {loading ?

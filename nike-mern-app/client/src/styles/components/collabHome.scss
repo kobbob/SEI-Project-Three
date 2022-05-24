@@ -1,7 +1,7 @@
 // ------GENERAL FRAMEWORK------- //
 .collab-wrapper, h1 {
   max-width: 800px;
-  margin: 15px auto;
+  margin: 5px auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -15,6 +15,14 @@
     left: 30px;
     z-index: 999;
     height: 300px; 
+    width: auto;
+  }
+  .stamp{
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    z-index: 999;
+    height: 500px; 
     width: auto;
   }
 

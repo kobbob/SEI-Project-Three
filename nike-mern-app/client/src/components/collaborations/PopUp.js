@@ -1,10 +1,10 @@
-
-import Giphy from '../../images/giphy.gif'
+import { useState, useEffect } from 'react'
+// import Giphy from '../../images/giphy.gif'
 
 // import { useState, useEffect } from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 
-// import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // import { userIsOwner, getTokenFromLocalStorage } from '../../helpers/auth'
 
@@ -19,25 +19,26 @@ const PopUp = props => {
 
   const { setPopUp } = props
 
-  // const { _id } = useParams()
+  const { _id } = useParams()
 
-  // const [collab, setCollab] = useState([])
+  const [collab, setCollab] = useState([])
   // const [errors, setErrors] = useState(false)
 
 
-  // // accessing Express API to get all collaborations
-  // useEffect(() => {
-  //   const getCollabs = async () => {
-  //     try {
-  //       const { data } = await axios.get(`/api/nike-collab/${_id}`)
-  //       setCollab(data)
-  //     } catch (err) {
-  //       console.log(err)
-  //       setErrors(true)
-  //     }
-  //   }
-  //   getCollabs()
-  // }, [_id])
+  // accessing Express API to get all collaborations
+  useEffect(() => {
+    const getCollabs = async () => {
+      try {
+        const { data } = await axios.get(`/api/nike-collab/${_id}`)
+        setCollab(data)
+        console.log(data)
+      } catch (err) {
+        console.log(err)
+        // setErrors(true)
+      }
+    }
+    getCollabs()
+  }, [_id])
 
 
   // // ? This function will execute a delete request
@@ -102,15 +103,15 @@ const PopUp = props => {
       <div className="pu-content-container">
         <div className="column">
           <div className="image-column">
-            <img className="pu-img" src={Giphy} alt="bone" />
+            <img className="pu-img" src={collab.image1} alt="bone" />
           </div>
         </div>
         <div className="column">
           <div className="text-column">
-            <h2 className="pu-title">Title</h2>
-            <h3 className="pu-status">Status: </h3>
-            <h4 className="pu-year">Year: </h4>
-            <h4 className="pu-description">Description: </h4>
+            <h2 className="pu-title">{collab.collaboration}</h2>
+            <h3 className="pu-status">Status: {collab.status}</h3>
+            <h4 className="pu-year">Year: {collab.year}</h4>
+            <h4 className="pu-description">Description: {collab.description}</h4>
           </div>
         </div>
       </div>
