@@ -10,12 +10,14 @@ import Navigation from './components/common/Navigation'
 import Menu from './components/Menu'
 import About from './components/About'
 import CollabHome from './components/collaborations/CollabHome'
-
+import AddCollab from './components/collaborations/AddCollab'
 
 // Import Auth Components
 import SignInLanding from './components/auth/SignInLanding'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
+
+
 
 
 
@@ -56,6 +58,8 @@ const App = () => {
             <Route path='/signinlanding' element={<SignInLanding />} />
             <Route path='/signin' element={<SignIn />} />
             <Route path='/signup' element={<SignUp />} />
+
+            <Route path='/add' element={<AddCollab />} />
 
             {/* <Route path='*' element={<NotFound />} /> */}
           </Routes>

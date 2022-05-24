@@ -3,10 +3,10 @@ import mongooseUniqueValidator from "mongoose-unique-validator"
 
 const collabSchema = new mongoose.Schema({
   collaboration: { type: String, required: true },
-  status: { type: String, required: true },
+  status: { type: String },
   year: { type: String, required: true },
   description: { type: String, required: true, maxLength: 700 },
-  image1: { type: String, required: true },
+  image1: { type: String },
   url: { type: String },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   createdAt: { type: Date, default: Date.now }

@@ -11,7 +11,7 @@ export const registerUser = async (req, res) => {
     //Submit our req.body to our model
     const newUser = await User.create(req.body)
     console.log('newUser -->', newUser)
-    return res.status(202).json({ message: `Registration Successful for ${newUser.username}` })
+    return res.status(202).json({ message: `Welcome ${newUser.username}` })
   } catch (err) {
     console.log(err)
     return res.status(422).json(err)

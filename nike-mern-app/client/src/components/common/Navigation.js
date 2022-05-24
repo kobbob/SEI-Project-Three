@@ -1,8 +1,6 @@
 //import ABOUT / SIGN IN / COLLAB  --> AUTH: ADD A COLLAB / YOUR WORLD / LOGOUT
 
-
 import { Link } from 'react-router-dom'
-
 
 const Navigation = () => {
 
