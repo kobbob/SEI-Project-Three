@@ -1,40 +1,42 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import Giphy from '../../images/giphy.gif'
 
-import { useParams, useNavigate } from 'react-router-dom'
+// import { useState, useEffect } from 'react'
+// import axios from 'axios'
 
-import { userIsOwner, getTokenFromLocalStorage } from '../../helpers/auth'
+// import { useParams, useNavigate } from 'react-router-dom'
 
-// Import spinner
-import Spinner from '../utilities/Spinner'
+// import { userIsOwner, getTokenFromLocalStorage } from '../../helpers/auth'
+
+// // Import spinner
+// import Spinner from '../utilities/Spinner'
 
 
 const PopUp = props => {
 
-  // Navigate
-  const navigate = useNavigate()
+  // // Navigate
+  // const navigate = useNavigate()
 
   const { setPopUp } = props
 
-  const { _id } = useParams()
+  // const { _id } = useParams()
 
-  const [collab, setCollab] = useState([])
-  const [errors, setErrors] = useState(false)
+  // const [collab, setCollab] = useState([])
+  // const [errors, setErrors] = useState(false)
 
 
-  // accessing Express API to get all collaborations
-  useEffect(() => {
-    const getCollabs = async () => {
-      try {
-        const { data } = await axios.get(`/api/nike-collab/${_id}`)
-        setCollab(data)
-      } catch (err) {
-        console.log(err)
-        setErrors(true)
-      }
-    }
-    getCollabs()
-  }, [_id])
+  // // accessing Express API to get all collaborations
+  // useEffect(() => {
+  //   const getCollabs = async () => {
+  //     try {
+  //       const { data } = await axios.get(`/api/nike-collab/${_id}`)
+  //       setCollab(data)
+  //     } catch (err) {
+  //       console.log(err)
+  //       setErrors(true)
+  //     }
+  //   }
+  //   getCollabs()
+  // }, [_id])
 
 
   // // ? This function will execute a delete request
@@ -55,39 +57,56 @@ const PopUp = props => {
   // }
 
 
+  // return (
+  //   <div className="PopUp">
+  //     {/* {collab ?
+  //       <> */}
+  //         {/* x close window */}
+  //         <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
+
+  //         <div className="pu-content-container">
+  //           {/* <h1>{collab.collaboration}</h1>
+  //           <hr /> */}
+  //           <div className='pu-img'>
+  //             <img src={image1} alt={'image'} />
+  //           </div>
+  //           {/* <h2>{collab.year}</h2>
+  //           <hr />
+  //           <h2>{collab.user.username}</h2>
+  //           <hr /> */}
+  //         </div>
+
+  //         {/* button controls */}
+  //         {/* {userIsOwner(collab) && */}
+  //           <div className="pu-button-container">
+  //             <button onClick={() => setPopUp(false)}> Delete Entry </button>
+  //             {/* <button onClick={deleteCollab}> Delete Entry </button> */}
+  //             <button onClick={() => setPopUp(false)}> Edit Entry </button>
+  //           </div>
+  //         }
+  //       {/* </>
+  //       :
+  //       <h2 className='text-center'>
+  //         {errors ? 'Something went wrong! Please try again later!' : <Spinner />}
+  //       </h2> */}
+  //     }
+  //   </div>
+  // )
+
+
   return (
     <div className="PopUp">
-      {collab ?
-        <>
-          {/* x close window */}
-          <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
-
-          <div className="pu-content-container">
-            {/* <h1>{collab.collaboration}</h1>
-            <hr />
-            <div className='pu-img'>
-              <img src={collab.image1} alt={`${collab.collaboration} - ${collab.year}`} />
-            </div>
-            <h2>{collab.year}</h2>
-            <hr />
-            <h2>{collab.user.username}</h2>
-            <hr /> */}
-          </div>
-
-          {/* button controls */}
-          {userIsOwner(collab) &&
-            <div className="pu-button-container">
-              <button onClick={() => setPopUp(false)}> Delete Entry </button>
-              {/* <button onClick={deleteCollab}> Delete Entry </button> */}
-              <button onClick={() => setPopUp(false)}> Edit Entry </button>
-            </div>
-          }
-        </>
-        :
-        <h2 className='text-center'>
-          {errors ? 'Something went wrong! Please try again later!' : <Spinner />}
-        </h2>
-      }
+      {/* x close window */}
+      <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
+      <div className="pu-content-container">
+        <img className="pu-img" src={Giphy} alt="bone" />
+        <h1>Add more bones?</h1>
+      </div>
+      {/* button controls */}
+      <div className="pu-button-container">
+        <button onClick={() => setPopUp(false)}> MORE BONES! </button>
+        <button onClick={() => setPopUp(false)}> No, thank you. </button>
+      </div>
     </div>
   )
 
