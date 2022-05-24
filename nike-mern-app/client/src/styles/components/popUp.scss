@@ -51,22 +51,66 @@ button:hover{
   justify-self: flex-start;
 }
 
-.pu-button-container{
-  margin-bottom: 0.5em;
-}
-
-.pu-img{
-  width: 20%;
-  margin-left: 2em;
-  border: 1px solid grey;
-}
-
 .pu-content-container{
   width: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 
+.image-column{
+  height: 400px;
+}
+
+
+.text-column{
+  height: 400px;
+}
+
+.pu-img{
+  object-fit: fill;
+}
+
+.pu-title{
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: left;
+  text-align:justify;
+}
+
+.pu-status{
+  margin-top: 30px;
+  font-size: x-large;
+  text-align: left;
+  text-align:justify;
+}
+
+.pu-year{
+  font-size: x-large;
+  text-align: left;
+  text-align:justify;
+}
+
+.pu-description{
+  font-size: large;
+  text-align: left;
+  text-align:justify;
+}
+
+
+.pu-button-container{
+  margin-bottom: 0.5em;
+}
 

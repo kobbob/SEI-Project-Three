@@ -1,3 +1,4 @@
+
 import Giphy from '../../images/giphy.gif'
 
 // import { useState, useEffect } from 'react'
@@ -99,9 +100,21 @@ const PopUp = props => {
       {/* x close window */}
       <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
       <div className="pu-content-container">
-        <img className="pu-img" src={Giphy} alt="bone" />
-        <h1>Add more bones?</h1>
+        <div className="column">
+          <div className="image-column">
+            <img className="pu-img" src={Giphy} alt="bone" />
+          </div>
+        </div>
+        <div className="column">
+          <div className="text-column">
+            <h2 className="pu-title">Title</h2>
+            <h3 className="pu-status">Status: </h3>
+            <h4 className="pu-year">Year: </h4>
+            <h4 className="pu-description">Description: </h4>
+          </div>
+        </div>
       </div>
+
       {/* button controls */}
       <div className="pu-button-container">
         <button onClick={() => setPopUp(false)}> Edit Entry </button>
