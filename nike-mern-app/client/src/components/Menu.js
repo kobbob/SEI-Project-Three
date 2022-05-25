@@ -17,30 +17,10 @@ const Menu = () => {
   }
 
   return (
-    <main>
-      <section className="menu-wrapper">
-        <div className="menu-item">
-          <a className="menu__item-link">About</a>
-          <div className="marquee">
-            <div className="marquee__inner" aria-hidden="true">
-              <span>About</span>
-              <span>About</span>
-              <span>About</span>
-              <span>About</span>
-            </div>
-          </div>
-        </div>
-        <div className="menu-item">
-          <a className="menu__item-link">Collaborations</a>
-          <div className="marquee">
-            <div className="marquee__inner" aria-hidden="true">
-              <span>Collaborations</span>
-              <span>Collaborations</span>
-              <span>Collaborations</span>
-              <span>Collaborations</span>
-            </div>
-          </div>
-        </div>
+    <section className="menu-wrapper">
+      <ul className='menu-list'>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/collaborations'>Collaborations</Link></li>
         {userIsAuthenticated() ?
           <>
             <li><Link to="/add">Add Collaboration</Link></li>
@@ -48,21 +28,16 @@ const Menu = () => {
           </>
           :
           <>
-            <div className="menu-item">
-              <a className="menu__item-link">Sign In</a>
-              <div className="marquee">
-                <div className="marquee__inner" aria-hidden="true">
-                  <span>Sign In</span>
-                  <span>Sign In</span>
-                  <span>Sign In</span>
-                  <span>Sign In</span>
-                </div>
-              </div>
-            </div>
+            <li><Link to="/signin">Sign In</Link></li>
           </>
         }
-      </section>
-    </main>
+      </ul>
+      <div className='marquee'>
+        <div className='marquee__content'>
+          <div className='marquee-text'>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</div>
+        </div>
+      </div>
+    </section>
   )
 }
 
