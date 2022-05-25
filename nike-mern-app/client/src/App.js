@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 
 // Import react-router-dom
@@ -19,17 +19,7 @@ import SignUp from './components/auth/SignUp'
 
 
 
-
-
 const App = () => {
-
-  // Loading Page
-  const [ loading, setLoading ] = useState(true)
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 200)
-  }, [])
-
 
   //Connect to Express API (NodeJS)
   console.log(process.env.REACT_APP_TOKEN)
@@ -45,28 +35,25 @@ const App = () => {
 
   return (
     <main className='site-wrapper'>
-      {loading === false ? (
-        <BrowserRouter>
-          {/* <Navbar /> */}
-          <Navigation />
-          <Routes>
-            <Route path='/collaborations' element={<CollabHome />} />
+      <BrowserRouter>
+        {/* <Navbar /> */}
+        <Navigation />
+        <Routes>
+          <Route path='/' element={<Loading />} />
+          <Route path='/collaborations' element={<CollabHome />} />
 
-            <Route path='/menu' element={<Menu />} />
-            <Route path='/about' element={<About />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/about' element={<About />} />
 
-            <Route path='/signin' element={<SignIn />} />
-            <Route path='/signup' element={<SignUp />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignUp />} />
 
-            <Route path='/add' element={<AddCollab />} />
-            <Route path='/singlecollab/:_id' element={<PopUp />} />
+          <Route path='/add' element={<AddCollab />} />
+          <Route path='/popup/:id' element={<PopUp />} />
 
-            {/* <Route path='*' element={<NotFound />} /> */}
-          </Routes>
-        </BrowserRouter>
-      ) : (
-        <Loading />
-      )}
+          {/* <Route path='*' element={<NotFound />} /> */}
+        </Routes>
+      </BrowserRouter>
     </main>
   )
 }

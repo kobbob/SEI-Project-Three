@@ -16,7 +16,7 @@ const PopUp = props => {
 
   const { setPopUp } = props
 
-  const { _id } = useParams()
+  const { id } = useParams()
 
   const [collab, setCollab] = useState([])
   const [errors, setErrors] = useState(false)
@@ -26,16 +26,16 @@ const PopUp = props => {
   useEffect(() => {
     const getSingleCollab = async () => {
       try {
-        const { data } = await axios.get(`/api/nike-collab/${_id}`)
+        const { data } = await axios.get(`/api/nike-collab/${id}`)
         setCollab(data)
-        console.log(data)
+        console.log('collab', data)
       } catch (err) {
         console.log(err)
         // setErrors(true)
       }
     }
     getSingleCollab()
-  }, [_id])
+  }, [id])
 
 
   // // ? This function will execute a delete request
@@ -74,6 +74,7 @@ const PopUp = props => {
               <h3 className="pu-status">Status: {collab.status}</h3>
               <h4 className="pu-year">Year: {collab.year}</h4>
               <h4 className="pu-description">Description: {collab.description}</h4>
+              <h4 className="pu-year">Entry Added By: {collab.users.username}</h4>
             </div>
           </div>
         </div>
