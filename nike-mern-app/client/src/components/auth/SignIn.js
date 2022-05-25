@@ -68,10 +68,13 @@ const SignIn = () => {
               {errors && <p className='text-danger text-center'>Unauthorised</p>}
               {/* Submit */}
               <button type="submit" className="btn btn-warning w-100">Submit</button>
-              <h6>Don&apos;t have an account? <Link to='/signup'>Click Here</Link> to sign up.</h6>
             </form>
           </Row>
         </Container>
+      </section>
+      <section className="reg-link">
+        <span>Don&apos;t have an account?</span>
+        <span><Link to='/signup'>Click Here</Link> to sign up.</span>
       </section>
     </section>
   )

@@ -9,8 +9,8 @@ const Loading = () => {
     <>
       <div className='loading-page'>
         <img src={giphy} alt='nike-running-app-gif' className='loading-gif' />
-        <h2>Loading . .</h2>
-        <Link to='/collaborations'>Enter</Link>
+        <h2>Welcome!</h2>
+        <h4><Link to='/collaborations'>Click Here to Enter</Link></h4>
       </div>
     </>
   )

@@ -49,7 +49,6 @@ const App = () => {
           <Route path='/signup' element={<SignUp />} />
 
           <Route path='/add' element={<AddCollab />} />
-          <Route path='/popup/:id' element={<PopUp />} />
 
           {/* <Route path='*' element={<NotFound />} /> */}
         </Routes>

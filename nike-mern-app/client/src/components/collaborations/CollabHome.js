@@ -18,6 +18,7 @@ const CollabHome = () => {
   const [errors, setErrors] = useState(false)
   const [loading, setLoading] = useState(true)
   const [popUp, setPopUp] = useState(false)
+  const [id, setId] = useState('')
 
   const handleCheckout = () => {
     setPopUp(true)
@@ -49,10 +50,10 @@ const CollabHome = () => {
       </div>
       <h1>Collaborations</h1>
       {loading ?
-        <p>Loading...</p>
+        <span>Loading...</span>
         :
         errors ?
-          <p>Collaborations could not load. Please try again later!</p>
+          <span>Collaborations could not load. Please try again later!</span>
           :
           <div className='collab-container'>
             {collabs.map(collab => {
@@ -61,11 +62,14 @@ const CollabHome = () => {
               return (
                 <div className='card-image' key={_id}>
                   <img src={image1} alt={`${collaboration} - ${year}`} />
-                  <button className='btn' onClick={() => setPopUp(true)}>Click to Open</button>
+                  <button className='btn' onClick={() => {
+                    setPopUp(true)
+                    setId(_id)
+                  }}>Click to Open</button>
                 </div>
               )
             })}
-            {popUp && <PopUp setPopUp={setPopUp} />}
+            {popUp && <PopUp setPopUp={setPopUp} id={id} />}
           </div>
       }
     </main>

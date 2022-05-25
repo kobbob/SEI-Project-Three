@@ -9,16 +9,13 @@ import { useParams } from 'react-router-dom'
 // import Spinner from '../utilities/Spinner'
 
 
-const PopUp = props => {
+const PopUp = ({ setPopUp, id }) => {
 
   // // Navigate
   // const navigate = useNavigate()
 
-  const { setPopUp } = props
 
-  const { id } = useParams()
-
-  const [collab, setCollab] = useState([])
+  const [collab, setCollab] = useState(false)
   const [errors, setErrors] = useState(false)
 
 
@@ -59,32 +56,34 @@ const PopUp = props => {
 
   return (
     <main className='wrapper'>
-      <div className="PopUp-Wrapper">
-        {/* x close window */}
-        <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
-        <div className="pu-content-container">
-          <div className="column">
-            <div className="image-column">
-              <img className="pu-img" src={collab.image1} alt={`${collab.collaboration}`} />
+      { collab &&
+        <div className="PopUp-Wrapper">
+          {/* x close window */}
+          <button className="popup-x" onClick={() => setPopUp(false)} >X</button>
+          <div className="pu-content-container">
+            <div className="column">
+              <div className="image-column">
+                <img className="pu-img" src={collab.image1} alt={`${collab.collaboration}`} />
+              </div>
+            </div>
+            <div className="column">
+              <div className="text-column">
+                <div className="pu-title">{collab.collaboration}</div>
+                <div className="pu-year">Year: {collab.year}</div>
+                <div className="pu-status">Status: {collab.status}</div>
+                <div className="pu-owner">Entry Added By: {collab.owner.username}</div>
+                <div className="pu-description">Description: {collab.description}</div>
+              </div>
             </div>
           </div>
-          <div className="column">
-            <div className="text-column">
-              <h2 className="pu-title">{collab.collaboration}</h2>
-              <h3 className="pu-status">Status: {collab.status}</h3>
-              <h4 className="pu-year">Year: {collab.year}</h4>
-              <h4 className="pu-description">Description: {collab.description}</h4>
-              <h4 className="pu-year">Entry Added By: {collab.users.username}</h4>
-            </div>
+  
+          {/* button controls */}
+          <div className="pu-button-container">
+            <button onClick={() => setPopUp(false)}> Edit Entry </button>
+            <button onClick={() => setPopUp(false)}> Delete Entry </button>
           </div>
         </div>
-
-        {/* button controls */}
-        <div className="pu-button-container">
-          <button onClick={() => setPopUp(false)}> Edit Entry </button>
-          <button onClick={() => setPopUp(false)}> Delete Entry </button>
-        </div>
-      </div>
+      } 
     </main>
   )
 
