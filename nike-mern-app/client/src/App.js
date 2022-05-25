@@ -11,6 +11,7 @@ import Menu from './components/Menu'
 import About from './components/About'
 import CollabHome from './components/collaborations/CollabHome'
 import AddCollab from './components/collaborations/AddCollab'
+import PopUp from './components/collaborations/PopUp'
 
 // Import Auth Components
 import SignInLanding from './components/auth/SignInLanding'
@@ -27,7 +28,7 @@ const App = () => {
   const [ loading, setLoading ] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 4000)
+    setTimeout(() => setLoading(false), 200)
   }, [])
 
 
@@ -60,6 +61,7 @@ const App = () => {
             <Route path='/signup' element={<SignUp />} />
 
             <Route path='/add' element={<AddCollab />} />
+            <Route path='/singlecollab/:_id' element={<PopUp />} />
 
             {/* <Route path='*' element={<NotFound />} /> */}
           </Routes>

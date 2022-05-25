@@ -17,11 +17,30 @@ const Menu = () => {
   }
 
   return (
-    <section className="menu-wrapper">
-      <h1>Menu Page</h1>
-      <ul>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/collaborations'>Collaborations</Link></li>
+    <main>
+      <section className="menu-wrapper">
+        <div className="menu-item">
+          <a className="menu__item-link">About</a>
+          <div className="marquee">
+            <div className="marquee__inner" aria-hidden="true">
+              <span>About</span>
+              <span>About</span>
+              <span>About</span>
+              <span>About</span>
+            </div>
+          </div>
+        </div>
+        <div className="menu-item">
+          <a className="menu__item-link">Collaborations</a>
+          <div className="marquee">
+            <div className="marquee__inner" aria-hidden="true">
+              <span>Collaborations</span>
+              <span>Collaborations</span>
+              <span>Collaborations</span>
+              <span>Collaborations</span>
+            </div>
+          </div>
+        </div>
         {userIsAuthenticated() ?
           <>
             <li><Link to="/add">Add Collaboration</Link></li>
@@ -29,11 +48,21 @@ const Menu = () => {
           </>
           :
           <>
-            <li><Link to="/signin">Sign In</Link></li>
+            <div className="menu-item">
+              <a className="menu__item-link">Sign In</a>
+              <div className="marquee">
+                <div className="marquee__inner" aria-hidden="true">
+                  <span>Sign In</span>
+                  <span>Sign In</span>
+                  <span>Sign In</span>
+                  <span>Sign In</span>
+                </div>
+              </div>
+            </div>
           </>
         }
-      </ul>
-    </section>
+      </section>
+    </main>
   )
 }
 
