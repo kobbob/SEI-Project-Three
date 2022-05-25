@@ -17,6 +17,10 @@ const About = () => {
           <li>Animated cursor;</li>
           <li>Navigate between pop-up single collabs.</li>
           <li>Add, Edit, Delete Collab -- Add in cloudinary functions</li>
+          <li>Make forms better</li>
+          <li>User Exp for Adding a Collab</li>
+          <li>What is your profile feature?</li>
+          <li></li>
         </ul>
       </p>
       <h2>Initial Moodboard</h2>
