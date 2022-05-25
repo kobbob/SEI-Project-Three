@@ -7,6 +7,8 @@ const About = () => {
       <p> Things I didn&apos;t manage to achieve so far:
         <ul>
           <li>Front-end:</li>
+          <li>Tidy up CSS into SASS</li>
+          <li>Comment on code</li>
           <li>Better Welcome Page;</li>
           <li>Offset/Staggered Grid;</li>
           <li>Responsive Design;</li>
