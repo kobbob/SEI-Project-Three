@@ -1,11 +1,18 @@
-import { Link } from 'react-router-dom'
+import moodboard from '../images/moodboard.png'
 
 const About = () => {
   return (
     <section className='about-wrapper'>
       <h1>About Page</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p> Things I didn&apos;t manage to achieve:
+        <ul>
+          <li>Animated cursor;</li>
+        </ul>
+      </p>
+      <h2>Initial Moodboard</h2>
+      <div className='moodboard'>
+        <img src={moodboard} alt='moodboard'/>
+      </div>
     </section>
   )
 }

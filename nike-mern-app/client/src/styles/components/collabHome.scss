@@ -8,6 +8,7 @@
   h1 {
     color: $preset-color-white;
     padding: 15px 0px 40px 0px;
+    margin-top: 40px;
   }
   .sticker{ //*needs to be removed in responsive design * //
     position: fixed;
@@ -54,13 +55,13 @@
     .btn{
       border: 2px solid #011627;
       border-radius: 0.3em;
-      background-color: #2EC4B6;
+      background-color: rgb(230, 255, 160);
       padding: 0.6em;
       margin: 0.5em;
       transition: 0.3s;
     }
     .btn:hover{
-      background-color: #E71D36;
+      background-color: rgb(230, 255, 160, 0.8);
       cursor: pointer;
     }
   }

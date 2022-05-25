@@ -14,7 +14,6 @@ import AddCollab from './components/collaborations/AddCollab'
 import PopUp from './components/collaborations/PopUp'
 
 // Import Auth Components
-import SignInLanding from './components/auth/SignInLanding'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 
@@ -56,7 +55,6 @@ const App = () => {
             <Route path='/menu' element={<Menu />} />
             <Route path='/about' element={<About />} />
 
-            <Route path='/signinlanding' element={<SignInLanding />} />
             <Route path='/signin' element={<SignIn />} />
             <Route path='/signup' element={<SignUp />} />
 

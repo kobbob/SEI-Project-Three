@@ -7,7 +7,7 @@ const Loading = () => {
     <>
       <div className='loading-page'>
         <img src={giphy} alt='nike-running-app-gif' className='loading-gif' />
-        <h1>Loading . .</h1>
+        <h6>Loading . .</h6>
       </div>
     </>
   )

@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import { userIsAuthenticated } from '../helpers/auth'
 
+import sneakerhead from '../images/sneakerhead.png'
 
 const Menu = () => {
 
@@ -18,6 +19,9 @@ const Menu = () => {
 
   return (
     <section className="menu-wrapper">
+      <div className='sticker-frame'>
+        <img src={sneakerhead} alt='nike-sneakerhead-shoe' className='sneakerhead' />
+      </div>
       <ul className='menu-list'>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/collaborations'>Collaborations</Link></li>
@@ -34,7 +38,7 @@ const Menu = () => {
       </ul>
       <div className='marquee'>
         <div className='marquee__content'>
-          <div className='marquee-text'>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</div>
+          <div className='marquee-text'>GET YOUR KICKS ON GET YOUR KICKS ON GET YOUR KICKS ON GET YOUR KICKS ON GET YOUR KICKS ON GET YOUR KICKS ON GET YOUR KICKS ON</div>
         </div>
       </div>
     </section>
