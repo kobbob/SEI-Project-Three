@@ -65,15 +65,16 @@ With a keen interest in Nike trainers, I wanted to create a platform for an onli
 
 I set out by creating a moodboard of websites and stylised features I could potentially use and created my wireframe and moodboard from this in tangent. Having a clear idea of what the end product should aim to look like design wise is always an important process for me, with the acceptance that things can evolve and change through time. 
 
-<img src="nike-mern-app/client/src/images/P3Moodboard.png">
+<img src="nike-mern-app/client/src/images/P3Moodboard.png" width=800>
 
 ### Wireframing
-<img src="nike-mern-app/client/src/images/P3-Wireframe-1.png">
-<img src="nike-mern-app/client/src/images/P3-Wireframe-2.png">
-<img src="nike-mern-app/client/src/images/P3-Wireframe-3.png">
+<img src="nike-mern-app/client/src/images/P3-Wireframe-1.png" width=800>
+<img src="nike-mern-app/client/src/images/P3-Wireframe-2.png" width=800>
+<img src="nike-mern-app/client/src/images/P3-Wireframe-3.png" width=800>
 
 __Object Model Diagram__
-<img src="nike-mern-app/client/src/images/P3-UML.png">
+
+<img src="nike-mern-app/client/src/images/P3-UML.png" width=800>
 
 ## Build Approach
 App features: 
