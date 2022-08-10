@@ -19,7 +19,7 @@ My chosen topic was to create an online database showcasing past and present Nik
   * [Planning](#planning)
   * [Wireframing](#wireframing)
 * [Build Approach](#build-approach)
-  * [Frontend Interface](#front-end-interface)
+  * [Frontend Interface](#frontend-interface)
   * [Backend Models and Controllers](#backend-models-and-controllers)
 * [Demo](#demo)
 * [Challenges](#challenges)
