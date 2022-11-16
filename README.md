@@ -8,7 +8,7 @@ We used express in the backend to store user-generated data in a custom mongoDB 
 
 My chosen topic was to create an online database showcasing past and present Nike trainer collaborations. User registration and authentication allowed data to be pushed into an existing database and showcased via the app. 
 
-✹ 🖥 Jump to the [Demo](#demo) section to see the app in action!
+🖥 Jump to the [Demo](#demo) section to see the app in action!
 
 <img src="https://media1.giphy.com/media/MSV81srLOt6ueEDCPE/giphy.gif?cid=790b7611e8045dd31b3d2fa20592e165865266137269059a&rid=giphy.gif&ct=g" width="180">
 
