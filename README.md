@@ -12,25 +12,23 @@ My chosen topic was to create an online database showcasing past and present Nik
 
 <img src="https://media1.giphy.com/media/MSV81srLOt6ueEDCPE/giphy.gif?cid=790b7611e8045dd31b3d2fa20592e165865266137269059a&rid=giphy.gif&ct=g" width="180">
 
-## Improvements
-* [Future Improvements](#future-improvements) to the app and deployment to follow within the next two weeks (written 19.01.2023)
 
 ## Navigation
 
 * [The App](#the-app)
+* [Demo](#demo)
 * [The Brief](#the-brief)
 * [Technologies Used](#technologies-used)
+* [Future Improvements](#future-improvements) 
 * [General Approach](#general-approach)
   * [Planning](#planning)
   * [Wireframing](#wireframing)
 * [Build Approach](#build-approach)
   * [Frontend Interface](#frontend-interface)
   * [Backend Models and Controllers](#backend-models-and-controllers)
-* [Demo](#demo)
 * [Challenges](#challenges)
 * [Wins](#wins)
 * [Key Learnings](#key-learnings)
-* [Future Improvements](#future-improvements)
 * [Credits](#credits)
 
 ## The App
@@ -40,9 +38,13 @@ My chosen topic was to create an online database showcasing past and present Nik
 | <img src="nike-mern-app/client/src/images/P3-landing.png" width=400 height=230>  | <img src="nike-mern-app/client/src/images/P3-menu.png" width=400 height=230> |
 | <img src="nike-mern-app/client/src/images/P3-main.png" width=400 height=230> | <img src="nike-mern-app/client/src/images/P3-info.png" width=400 height=230> | 
 
-[Demo](#demo)
+
+## Demo 
+
+https://user-images.githubusercontent.com/103049670/183913115-57051795-cf02-4cd8-a8cb-b3e0abd7e9c5.mp4
 
 ## The Brief
+
 * Build a full-stack application using MongoDB, an Express API, React and Node.js.
 * Use the Express API to serve your data from a Mongo database. 
 * Consume your custom API with a separate front-end with React. 
@@ -62,6 +64,23 @@ My chosen topic was to create an online database showcasing past and present Nik
  * Visual Studio Code & ESlint
  * Git & GitHub
  * Insomnia
+ 
+
+## Future Improvements
+
+✨ Improvements to the app and deployment to follow within the next two weeks (written 19.01.2023) ✨ 
+
+* Intended features that were not met in the timeframe: 
+  * Future collaboration page showing suggested collaborations from users. 
+  * Filter button (past, present, future collaborations on the main index). 
+  * Profile page for user (to review, edit, delete entries on one page). 
+  * Reviews and comments section on the pop up box showing each trainer and its details. Utilising embedded relationships. 
+
+* CSS features:		 
+  * Interactive cursor with an image instead of standard arrow/hand. 
+  * Animated buttons/text when hovering over. 
+  * Develop the pop-up box to have multiple image transitions within.  
+
 
 ## General Approach
 
@@ -263,10 +282,6 @@ Ensuring that we are assigned to a secureRoute (by including an authorization he
     try {
    ```
 
-## Demo
-
-https://user-images.githubusercontent.com/103049670/183913115-57051795-cf02-4cd8-a8cb-b3e0abd7e9c5.mp4
-
 
 ## Challenges
 
@@ -286,18 +301,6 @@ https://user-images.githubusercontent.com/103049670/183913115-57051795-cf02-4cd8
  * I found it took me a while to complete certain challenges often due to missing a typo. 
  * Once I feel more comfortable with the basics of CSS/SASS, I think I will be able to give more attention to the functioning and potential features for any future apps. I perhaps spend too much time thinking about the design at the beginning and then lose time towards the end of the project to work on the functionality of the app, which is extremely important. 
 
-
-## Future Improvements
-* Intended features that were not met in the timeframe: 
-       * Future collaboration page showing suggested collaborations from users. 
-       * Filter button (past, present, future collaborations on the main index). 
-       * Profile page for user (to review, edit, delete entries on one page). 
-       * Reviews and comments section on the pop up box showing each trainer and its details. Utilising embedded relationships. 
-         
-* CSS features:		 
-       * Interactive cursor with an image instead of standard arrow/hand. 
-       * Animated buttons/text when hovering over. 
-       * Develop the pop-up box to have multiple image transitions within.  
 
 ## Credits
 
