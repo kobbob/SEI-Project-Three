@@ -14,7 +14,7 @@ My chosen topic was to create an online database showcasing past and present Nik
 
 ✨✨✨✨✨✨✨✨✨
 ## Improvements
-* Check out the [Future Improvements](#future-improvements) to the app and deployment to follow within the next two weeks (written 19.01.2023)
+* Check out the [Future Improvements](#future-improvements) to the app and deployment to follow.
 
 
 ## Navigation
