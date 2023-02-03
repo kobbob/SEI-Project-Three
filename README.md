@@ -294,7 +294,7 @@ Ensuring that we are assigned to a secureRoute (by including an authorization he
 
 
 ## Wins
- * I was happy with how the styling came out however it didn’t fulfil all my intentions (see future improvements below). 
+ * I was happy with how the styling came out however it didn’t fulfil all my intentions (see [Future Improvements](#future-improvements)). 
  * Being able to produce a full-stack app on my own for the first time. 
  * Being able to have creative agency throughout and explore ideas as they came along. 
 
