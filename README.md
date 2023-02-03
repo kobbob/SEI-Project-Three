@@ -72,7 +72,7 @@ https://user-images.githubusercontent.com/103049670/183913115-57051795-cf02-4cd8
 
 ## Future Improvements
 
-✨ Improvements to the app and deployment to follow within the next two weeks (written 19.01.2023) ✨ 
+✨ Improvements to the app and deployment to follow ✨ 
 
 * Intended features that were not met in the timeframe: 
   * Future collaboration page showing suggested collaborations from users. 
